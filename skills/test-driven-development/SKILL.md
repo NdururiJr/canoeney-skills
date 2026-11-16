@@ -21,7 +21,7 @@ Write the test first. Watch it fail. Write minimal code to pass.
 - Refactoring
 - Behavior changes
 
-**Exceptions (ask your human partner):**
+**Exceptions (ask your manager (message them with `send_message`) and wait for the reply):**
 - Throwaway prototypes
 - Generated code
 - Configuration files
@@ -188,9 +188,7 @@ the change done, run the project's test command (bare `pytest`,
 `npm test`, `cargo test` — whatever the repo uses) even when your task
 named only one test file. A scope statement in your task bounds the
 deliverable, not your verification. Any failure that run shows —
-including one you didn't cause — goes in your report by name; a red
-test you watched scroll past and didn't mention is a report falsified
-by omission.
+including one you didn't cause — goes in your report by name.
 
 ### REFACTOR - Clean Up
 
@@ -213,7 +211,7 @@ Next failing test for next feature.
 | **Clear** | Name describes behavior | `test('test1')` |
 | **Shows intent** | Demonstrates desired API | Obscures what code should do |
 
-When writing or changing any test, read [writing-good-tests.md](writing-good-tests.md) for the rules that keep tests honest:
+When writing or changing any test, read `writing-good-tests.md` in this skill's folder for the rules that keep tests honest:
 - Name the production change that would make the test fail — before writing it
 - Assert on real behavior, never on mock behavior
 - Keep test-only code in test utilities, out of production classes
@@ -309,7 +307,7 @@ Can't check all boxes? You skipped TDD. Start over.
 
 | Problem | Solution |
 |---------|----------|
-| Don't know how to test | Write wished-for API. Write assertion first. Ask your human partner. |
+| Don't know how to test | Write wished-for API. Write assertion first. Ask your manager (message them with `send_message`). |
 | Test too complicated | Design too complicated. Simplify interface. |
 | Must mock everything | Code too coupled. Use dependency injection. |
 | Test setup huge | Extract helpers. Still complex? Simplify design. |
@@ -326,5 +324,3 @@ Never fix bugs without a test.
 Production code → test exists and failed first
 Otherwise → not TDD
 ```
-
-No exceptions without your human partner's permission.

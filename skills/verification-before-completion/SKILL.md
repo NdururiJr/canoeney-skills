@@ -32,7 +32,7 @@ BEFORE claiming any status or expressing satisfaction:
    - If YES: State claim WITH evidence
 5. ONLY THEN: Make the claim
 
-Skip any step = lying, not verifying
+Skip any step = guessing, not verifying
 ```
 
 ## Common Failures
@@ -44,7 +44,7 @@ Skip any step = lying, not verifying
 | Build succeeds | Build command: exit 0 | Linter passing, logs look good |
 | Bug fixed | Test original symptom: passes | Code changed, assumed fixed |
 | Regression test works | Red-green cycle verified | Test passes once |
-| Agent completed | VCS diff shows changes | Agent reports "success" |
+| Another agent's work is done | VCS diff shows changes | The agent reports "success" |
 | Requirements met | Line-by-line checklist | Tests passing |
 
 ## Red Flags - STOP
@@ -52,7 +52,7 @@ Skip any step = lying, not verifying
 - Using "should", "probably", "seems to"
 - Expressing satisfaction before verification ("Great!", "Perfect!", "Done!", etc.)
 - About to commit/push/PR without verification
-- Trusting agent success reports
+- Trusting another agent's success report
 - Relying on partial verification
 - Thinking "just this once"
 - Tired and wanting work over
@@ -66,7 +66,7 @@ Skip any step = lying, not verifying
 | "I'm confident" | Confidence ≠ evidence |
 | "Just this once" | No exceptions |
 | "Linter passed" | Linter ≠ compiler |
-| "Agent said success" | Verify independently |
+| "The other agent said success" | Verify independently |
 | "I'm tired" | Exhaustion ≠ excuse |
 | "Partial check is enough" | Partial proves nothing |
 | "Different words so rule doesn't apply" | Spirit over letter |
@@ -97,7 +97,7 @@ Skip any step = lying, not verifying
 ❌ "Tests pass, phase complete"
 ```
 
-**Agent delegation:**
+**Another agent's report:**
 ```
 ✅ Agent reports success → Check VCS diff → Verify changes → Report actual state
 ❌ Trust agent report
@@ -111,7 +111,6 @@ Skip any step = lying, not verifying
 - ANY positive statement about work state
 - Committing, PR creation, task completion
 - Moving to next task
-- Delegating to agents
 
 **Rule applies to:**
 - Exact phrases

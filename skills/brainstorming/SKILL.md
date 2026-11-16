@@ -5,14 +5,18 @@ description: "You MUST use this before any creative work - creating features, bu
 
 # Brainstorming
 
-You are very good at building. You build what you believe your human
-partner wants, and that belief is usually thinner than it feels. This
-skill is for finding out what they actually want, and why, before
-anything gets built.
+You are very good at building. You build what you believe your manager
+(message them with `send_message`) wants, and that belief is usually
+thinner than it feels. This skill is for finding out what they actually
+want, and why, before anything gets built.
 
 People often haven't finished working out what they want. Good questions
 help them think it through. When you understand the why, you make the
 hundred decisions they never mention the way they would have made them.
+
+You talk with your manager by message. Wherever this skill asks them
+something and waits, send your manager the question with `send_message`
+and wait for the reply.
 
 ## First: What Do You Actually Know?
 
@@ -26,10 +30,10 @@ why?
 Before you start implementing, you must, in order:
 
 1. Lay out the approaches in a message of their own, and have your
-   human partner pick one (see Lay out the approaches).
+   manager pick one (see Lay out the approaches).
 2. Write the design doc, short or full (see Size the Work).
-3. Get their approval of that doc.
-4. Invoke the superpowers:writing-plans skill.
+3. Have them confirm that the doc captures what they want.
+4. Invoke the `writing-plans` skill.
 
 If nothing is open when you write your first message and there's one
 sensible way, steps 1 to 3 happen in that message (see Your First
@@ -72,8 +76,8 @@ Move the work forward, with one of these:
   and which you'd pick. If nothing like that is open, there's one
   sensible way: end with the short design itself (the approach, a line on
   why the others don't fit, and the design in a few lines) and ask them
-  to approve it. Their approval covers the approach and the design: write
-  the short design doc as approved and go on to the plan.
+  to confirm it. Their confirmation covers the approach and the design:
+  write the short design doc as confirmed and go on to the plan.
   Specs are often incomplete, so confirm before you build on one.
 - **They haven't:** one open question, in their own terms, about the
   biggest thing their request leaves unsettled. Say why you're asking:
@@ -104,8 +108,8 @@ call and your reason as a proposal they can correct, and move the work
 forward. Process steps are always your calls: writing things up, where
 files go, looking further, how to show something. Do them and say so.
 Ask one at a time. Use plain language, pitched just a little above where
-your human partner is. Match their vocabulary; never use process jargon.
-You never need to quote this skill to your human partner.
+your manager is. Match their vocabulary; never use process jargon.
+You never need to quote this skill to your manager.
 
 Be clear and concise. Lead with what matters. Avoid jargon. When you
 report what you found, give them the most important findings and offer
@@ -167,8 +171,8 @@ next one. This is for how it gets built; for what they want, get them
 describing first.
 
 **Show, don't tell.** Whenever seeing would help more than reading,
-sketch it in text: a few lines of what they'd see. Offer the visual
-companion (below) when the look itself is theirs to decide:
+sketch it in text: a few lines of what they'd see. Do this whenever the
+look itself is theirs to decide:
 
 - something they'll look at: a screen, a page, a printout, a sign
 - a layout or arrangement: of a screen, a room, a schedule
@@ -176,16 +180,12 @@ companion (below) when the look itself is theirs to decide:
 - options that would look different from each other
 - a structure that's easier to see than read: a diagram, a timeline, a map
 
-Once they've accepted, use it for mockups to react to, side-by-side
-options, and throwaway prototypes they can click.
-
 **Spike to feel things out.** Agentic work is waterfall, but very, very
 fast. A quick throwaway build is often the cheapest way to learn what
 they want or whether something works. Offer one when it would help.
 When they just want to spike, get out of the way. Spikes get no tests
-or minimal ones, aren't bulletproof, and skip the plan, implementation,
-and review process. Bring what the spike taught you back into the
-conversation.
+or minimal ones, aren't bulletproof, and stay labeled throwaway. Bring
+what the spike taught you back into the conversation.
 
 ## Play It Back
 
@@ -201,10 +201,7 @@ or missing.
 
 Before you send a chunk, check it: does it describe something they'll
 look at, like a page, a screen, a schedule, or a printout? If so, put a
-text sketch next to the description. If the look itself is theirs to
-decide and they haven't seen the visual companion offer yet, send the
-offer instead (its own message, below) and hold the chunk for the next
-message. Once they've accepted, put a mockup next to the description.
+text sketch next to the description.
 
 ## Size the Work
 
@@ -229,7 +226,7 @@ order, and brainstorm them one at a time.
 ## The Written Design
 
 Write a plain document a talented builder in the domain could plan
-from without going back to your human partner. Cover:
+from without going back to your manager. Cover:
 
 - intent and the why
 - goals, non-goals, anti-goals
@@ -239,47 +236,50 @@ from without going back to your human partner. Cover:
 - what's left to the builder
 
 For a small change, the short design covers the same points in a line
-or two each and goes straight to your human partner, without the
+or two each and goes straight to your manager, without the
 builder check.
 
 **Where it goes:** in a software repo,
 `docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md`, committed.
-Otherwise, pick a sensible place and say where. Your human partner's
+Otherwise, pick a sensible place and say where. Your manager's
 preferences override both.
 
-**Builder check** (for a project): dispatch a fresh subagent with
-`builder-check-prompt.md` in this directory. When you tell your human
-partner you're writing it up, say a reviewer will read it first and you
-may come back once with a few questions. Don't hand over the document
-until the check is back. Sort what the builder asks into three piles:
+**Builder check** (for a project): read the document yourself as that
+builder would, using the prompt in `builder-check-prompt.md` in this
+skill's folder. When you tell your manager you're writing it up, say you
+will check it first as a builder would and may come back once with a few
+questions. Don't hand over the document until the check is done. Sort
+what the check asks into three piles:
 
 - **Answered already** by the conversation or the project: put the answer
   in the document.
 - **Minor:** a sensible builder could settle it without changing what gets
   built. Settle it yourself and mark it in the document as your call.
-- **Theirs:** only your human partner can answer it, and the answer changes
+- **Theirs:** only your manager can answer it, and the answer changes
   what gets built.
 
-Bring the "theirs" pile in one message, most important first. Update the
-document with their answers, then hand it over with a short list of the
-calls you made so they can check those while reading. That's the only
-round of questions the check produces. Without a subagent tool, read the
-document as that builder yourself.
+Bring the "theirs" pile in one message, most important first, and wait
+for the reply. Update the document with their answers, then hand it over
+with a short list of the calls you made so they can check those while
+reading. That's the only round of questions the check produces.
 
 <HARD-GATE>
-Nothing gets built until your human partner approves the design doc:
-the short one for a small change, the full one for a project.
-Building includes writing product code, scaffolding, installing
-dependencies, creating projects, and invoking an implementation skill.
-Reading and exploring are fine.
+Nothing gets built until your manager has confirmed that the design doc
+captures what they want: the short one for a small change, the full one
+for a project. Building includes writing product code, scaffolding,
+installing dependencies, creating projects, and invoking an
+implementation skill. Reading and exploring are fine.
 
 Two exceptions. If they opted out of the questions, the skill is done
 and the gate goes with it. A spike they said yes to may be built; it
 stays labeled throwaway, and keeping what it produced is a new request
 that comes back through this gate.
 
-After the design doc is approved, the next step is the plan: invoke
-superpowers:writing-plans and no other skill.
+After the design doc is confirmed, the next step is the plan: invoke
+the `writing-plans` skill and no other skill.
+
+Whether a design also needs anyone's approval is set by your role file,
+not by this skill.
 </HARD-GATE>
 
 ## Red Flags
@@ -290,27 +290,5 @@ superpowers:writing-plans and no other skill.
 | "I'll fill in sensible defaults" | Good. Say them out loud. A default they never heard is one they couldn't reject. |
 | "I've answered their questions, so I'll write the doc" | Lay out the approaches first, in a message of their own (or, when nothing was open from the start, in your first message's short design). |
 | "I should explain the process first" | Ask your question. The process shows itself. |
-| "They said 'sounds good' to the idea" | Approval covers what you showed them. A design doc you haven't written isn't approved. |
+| "They said 'sounds good' to the idea" | Confirmation covers what you showed them. A design doc you haven't written isn't confirmed. |
 | "The spike works, I'll keep building on it" | Keeping it is a new request. Back through the gate. |
-
-## Visual Companion
-
-A browser tab for showing mockups, diagrams, and prototypes. It's a
-tool, not a mode: accepting it doesn't send every question to the
-browser.
-
-**Offer it just-in-time.** Offer it the first time one of the moments
-above comes up, never upfront. The offer is its own message with nothing
-else in it:
-
-> "This might be easier if I show you. Want me to open a browser tab with some mockups?"
-
-If they decline, stay in text and don't offer again unless they raise it.
-
-**Per question, ask: would they understand this better by seeing it?**
-Mockups, layouts, diagrams, and side-by-side designs go in the browser.
-Requirements, scope, tradeoffs, and conceptual choices stay in text. A
-question about a UI topic isn't automatically a visual question.
-
-If they accept, read `visual-companion.md` in this directory before
-starting the server.

@@ -162,7 +162,7 @@ You MUST complete each phase before proceeding to the next.
 4. **When You Don't Know**
    - Say "I don't understand X"
    - Don't pretend to know
-   - Ask for help
+   - Ask your manager for help (message them with `send_message`)
    - Research more
 
 ### Phase 4: Implementation
@@ -174,7 +174,7 @@ You MUST complete each phase before proceeding to the next.
    - Automated test if possible
    - One-off test script if no framework
    - MUST have before fixing
-   - Use the `superpowers:test-driven-development` skill for writing proper failing tests
+   - Use the `test-driven-development` skill for writing proper failing tests
 
 2. **Implement Single Fix**
    - Address the root cause identified
@@ -186,7 +186,7 @@ You MUST complete each phase before proceeding to the next.
    - Test passes now?
    - No other tests broken?
    - Issue actually resolved?
-   - Use the `superpowers:verification-before-completion` skill before claiming success
+   - Use the `verification-before-completion` skill before claiming success
 
 4. **If Fix Doesn't Work**
    - STOP
@@ -207,7 +207,7 @@ You MUST complete each phase before proceeding to the next.
    - Are we "sticking with it through sheer inertia"?
    - Should we refactor architecture vs. continue fixing symptoms?
 
-   **Discuss with your human partner before attempting more fixes**
+   **Before attempting more fixes, send your manager the question with `send_message` and wait for the reply**
 
    This is NOT a failed hypothesis - this is a wrong architecture.
 
@@ -230,7 +230,7 @@ If you catch yourself thinking:
 
 **If 3+ fixes failed:** Question the architecture (see Phase 4.5)
 
-## your human partner's Signals You're Doing It Wrong
+## Your Manager's Signals You're Doing It Wrong
 
 **Watch for these redirections:**
 - "Is that not happening?" - You assumed without verifying

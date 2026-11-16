@@ -1,7 +1,8 @@
 # Builder Check Prompt
 
-Dispatch a fresh general-purpose subagent with this prompt once the
-written design exists. Fill in the domain and the document path.
+Once the written design exists, take this role yourself: set aside what
+you know from the conversation, fill in the domain and the document path,
+and read only the document.
 
 ```
 You are a talented [DOMAIN, e.g. "software engineer", "event planner",

@@ -5,14 +5,13 @@ description: Use when completing tasks, implementing major features, or before m
 
 # Requesting Code Review
 
-Dispatch a code reviewer subagent to catch issues before they cascade. The reviewer gets precisely crafted context for evaluation — never your session's history.
+Ask a reviewer to check the work and catch issues before they cascade. The reviewer gets precisely crafted context for evaluation — never your session's history.
 
 **Core principle:** Review early, review often.
 
 ## When to Request Review
 
 **Mandatory:**
-- After each task in subagent-driven development
 - After completing major feature
 - Before merge to main
 
@@ -29,9 +28,9 @@ BASE_SHA=$(git rev-parse HEAD~1)  # or: git merge-base origin/main HEAD
 HEAD_SHA=$(git rev-parse HEAD)
 ```
 
-**2. Dispatch code reviewer subagent:**
+**2. Send the request:**
 
-Dispatch a `general-purpose` subagent, filling the template at [code-reviewer.md](code-reviewer.md)
+Fill the template in `code-reviewer.md` (in this skill's folder) and send it to the reviewer with `send_message`. Who reviews the work is set by your role file.
 
 **Placeholders:**
 - `{DESCRIPTION}` - Brief summary of what you built
@@ -55,13 +54,13 @@ You: Let me request code review before proceeding.
 BASE_SHA=$(git log --oneline | grep "Task 1" | head -1 | cut -d' ' -f1)
 HEAD_SHA=$(git rev-parse HEAD)
 
-[Dispatch code reviewer subagent]
+[Send the filled template to the reviewer with send_message]
   DESCRIPTION: Added verifyIndex() and repairIndex() with 4 issue types
   PLAN_OR_REQUIREMENTS: Task 2 from docs/superpowers/plans/deployment-plan.md
   BASE_SHA: a7981ec
   HEAD_SHA: 3df7661
 
-[Subagent returns]:
+[The reviewer replies]:
   Strengths: Clean architecture, real tests
   Issues:
     Important: Missing progress indicators
@@ -76,7 +75,7 @@ You: [Fix progress indicators]
 
 | Excuse | Reality |
 |--------|---------|
-| "I'll just review the diff myself instead of dispatching a reviewer" | You're the coordinator — reviewing the diff inline burns the context window you need to keep driving the work. Dispatch a reviewer subagent: the diff and the evaluation live in its context, and only the findings come back to you. |
+| "I'll just review the diff myself instead of asking a reviewer" | Same author, same blind spots. A reviewer who did not write the change sees what you cannot, and only the findings come back to you. |
 | "The reviewer needs my whole session history to understand the change" | Hand it precisely crafted context, never your session's history. That keeps the reviewer on the work product, not your thought process. |
 
 ## Red Flags
@@ -92,4 +91,4 @@ You: [Fix progress indicators]
 - Show code/tests that prove it works
 - Request clarification
 
-See template at: [code-reviewer.md](code-reviewer.md)
+See the template in `code-reviewer.md` in this skill's folder.

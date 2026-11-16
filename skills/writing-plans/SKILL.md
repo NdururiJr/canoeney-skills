@@ -11,10 +11,8 @@ Write implementation plans for an engineer who has not seen this codebase or thi
 
 **Announce at start:** "I'm using the writing-plans skill to create the implementation plan."
 
-**Context:** If working in an isolated worktree, it should have been created via the `superpowers:using-git-worktrees` skill at execution time.
-
 **Save plans to:** `docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md`
-- (User preferences for plan location override this default)
+- (Your manager's preferences, or your role file, for plan location override this default)
 
 ## Scope Check
 
@@ -56,7 +54,7 @@ independently testable deliverable.
 ```markdown
 # [Feature Name] Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** Implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** [One sentence describing what this builds]
 
@@ -162,7 +160,7 @@ opposite failure, and the self-review catches both.
 
 ## Self-Review
 
-After writing the complete plan, look at the spec with fresh eyes and check the plan against it. This is a checklist you run yourself — not a subagent dispatch.
+After writing the complete plan, look at the spec with fresh eyes and check the plan against it. This is a checklist you run yourself.
 
 **1. Spec coverage:** Skim each section/requirement in the spec. Can you point to a task that implements it? List any gaps.
 
@@ -176,29 +174,15 @@ After writing the complete plan, look at the spec with fresh eyes and check the 
 
 If you find issues, fix them inline. No need to re-review — just fix and move on. If you find a spec requirement with no task, add the task.
 
-## Execution Handoff
+## Handoff
 
-After saving and self-reviewing the plan, link it for your human partner
-to read. If they have already explicitly supplied an execution method, ask
-them to review the plan and confirm it captures what they want; wait for that
-review before implementation, then use the preserved method. Otherwise, ask
-them to review the plan and choose an execution method before implementation.
+After saving and self-reviewing the plan, tell your manager (message them
+with `send_message`) where it is saved, with a few lines on what it builds,
+how many tasks it has, and what in it they should read first.
 
-**When no execution method has already been supplied:**
+If, while writing the plan, you find a question only your manager can
+answer and the answer would change the plan, send your manager the
+question with `send_message` and wait for the reply before you finish it.
 
-**"Plan complete and saved to `docs/superpowers/plans/<filename>.md`. Please review the plan. Which execution approach would you prefer?**
-
-- **Subagent-driven** - A fresh subagent implements each task and a fresh reviewer checks it before the next one starts, then a whole-branch review at the end. Most thorough; costs a fresh context per task and per review.
-- **Native** - I implement every task myself in this session, the way this harness runs work, then one fresh reviewer on the most capable model checks the whole branch. Cheapest and fastest; no independent review until the end. Runs well with a mid-tier session model, since the plan carries the design.
-
-**For this plan I recommend <one of the two>, because <one sentence from the plan: how much the tasks depend on each other's interfaces, how many there are, what a shipped mistake would cost>. Does the plan capture what you want, and which approach should we use?"**
-
-**When an execution method has already been supplied:**
-
-**"Plan complete and saved to `docs/superpowers/plans/<filename>.md`. Please review the plan. Does it capture what you want?"**
-
-**If Subagent-driven chosen:**
-- **REQUIRED SUB-SKILL:** Use superpowers:subagent-driven-development
-
-**If Native chosen:**
-- **REQUIRED SUB-SKILL:** Use superpowers:executing-plans
+Who reviews a plan before work starts, and how its tasks reach the people
+who build them, is set by your role file, not by this skill.

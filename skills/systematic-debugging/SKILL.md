@@ -162,7 +162,7 @@ You MUST complete each phase before proceeding to the next.
 4. **When You Don't Know**
    - Say "I don't understand X"
    - Don't pretend to know
-   - Ask your manager for help (message them with `send_message`)
+   - Ask your manager for help (reach them the way your role file says)
    - Research more
 
 ### Phase 4: Implementation
@@ -207,7 +207,7 @@ You MUST complete each phase before proceeding to the next.
    - Are we "sticking with it through sheer inertia"?
    - Should we refactor architecture vs. continue fixing symptoms?
 
-   **Before attempting more fixes, send your manager the question with `send_message` and wait for the reply**
+   **Before attempting more fixes, ask your manager the way your role file says, and wait for the reply**
 
    This is NOT a failed hypothesis - this is a wrong architecture.
 

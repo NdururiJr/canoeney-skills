@@ -6,7 +6,7 @@ description: "You MUST use this before any creative work - creating features, bu
 # Brainstorming
 
 You are very good at building. You build what you believe your manager
-(message them with `send_message`) wants, and that belief is usually
+(reach them the way your role file says) wants, and that belief is usually
 thinner than it feels. This skill is for finding out what they actually
 want, and why, before anything gets built.
 
@@ -14,9 +14,8 @@ People often haven't finished working out what they want. Good questions
 help them think it through. When you understand the why, you make the
 hundred decisions they never mention the way they would have made them.
 
-You talk with your manager by message. Wherever this skill asks them
-something and waits, send your manager the question with `send_message`
-and wait for the reply.
+Wherever this skill asks your manager something and waits, ask your
+manager the way your role file says, and wait for the reply.
 
 ## First: What Do You Actually Know?
 

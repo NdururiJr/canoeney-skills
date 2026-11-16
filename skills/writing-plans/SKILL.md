@@ -176,13 +176,13 @@ If you find issues, fix them inline. No need to re-review — just fix and move 
 
 ## Handoff
 
-After saving and self-reviewing the plan, tell your manager (message them
-with `send_message`) where it is saved, with a few lines on what it builds,
-how many tasks it has, and what in it they should read first.
+After saving and self-reviewing the plan, tell your manager — reach them the way
+your role file says — where it is saved, with a few lines on what it
+builds, how many tasks it has, and what in it they should read first.
 
 If, while writing the plan, you find a question only your manager can
-answer and the answer would change the plan, send your manager the
-question with `send_message` and wait for the reply before you finish it.
+answer and the answer would change the plan, ask your manager the way
+your role file says, and wait for the reply before you finish it.
 
 Who reviews a plan before work starts, and how its tasks reach the people
 who build them, is set by your role file, not by this skill.

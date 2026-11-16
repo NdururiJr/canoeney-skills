@@ -20,20 +20,21 @@ record that survives your own forgetting.
 ledger and the tool results carry the record.
 
 **Continuous execution:** Do not pause to ask your manager "should I
-continue?" after every task. Execute all tasks from the plan without
-stopping, except where your role file says to stop.
+continue?" after every task. Work through the plan's tasks in order, and
+stop where your role file says to stop.
 
-**Rulings, not stalls.** Conflicts, ambiguities, plan defects — decide them.
-The spec is the binding authority, the plan is its argument, and your
-judgment settles what neither answers. Record every decision in the ledger
-as `Ruling: <what you decided> — <why> — <what it costs if wrong>`, and keep
+**Rulings, not stalls.** Within what your role file allows, decide
+conflicts, ambiguities and plan defects yourself. The spec is the binding
+authority, the plan is its argument, and your judgment settles what
+neither answers. Record every decision in the ledger as
+`Ruling: <what you decided> — <why> — <what it costs if wrong>`, and keep
 going. Deviating from the plan without a ledgered ruling is a decision made
 in secret.
 
-A plan so broken that every path forward is a guess also stops you: send
-your manager the question with `send_message` and wait for the reply. What
-else needs someone's say before you act is set by your role file, not by
-this skill.
+A plan so broken that every path forward is a guess also stops you: ask
+your manager the way your role file says, and wait for the reply. What
+needs someone's say before you act is set by your role file, not by this
+skill.
 
 ## When to Use
 
@@ -260,9 +261,13 @@ Before you delete anything, collect every ledger line containing
 `Ruling:` into your final message under "Rulings I made", in the order you
 made them, each with what it costs if wrong, and every `minor (deferred)`
 line under "Deferred minors". Both lists are exhaustive. Your final
-message (send it to your manager with `send_message`) is the only place
-the decisions you took on your manager's behalf — and the findings you
-chose not to act on — reach them.
+message (reach your manager the way your role file says) is the only
+place the decisions you took on your manager's behalf — and the findings
+you chose not to act on — reach them.
+
+A message holds at most 2000 characters; longer text belongs in a file on
+your branch that you name in the message. Write that file before you
+delete the workspace, outside the workspace directory.
 
 When the final review is clean and its fixes are committed, delete this
 plan's workspace directory — the git history is the record now. Sibling
@@ -279,7 +284,7 @@ Then hand the branch over as your role file says.
 | "I'll run the full suite at the end instead of per step" | Per-step runs are how you learn which step broke it. The end-of-task run is the contract, not a substitute. |
 | "The plan is wrong here, I'll just do the right thing" | Do the right thing and ledger the ruling. Unledgered deviation is a decision made in secret. |
 | "I'll write the ledger lines after a few tasks" | Compaction does not wait for a convenient moment. One line per task, in the same message as the commit. |
-| "Let me check in before the next task" | Progress prompts spend your manager's time. Only a broken plan, or what your role file names, stops you. |
+| "Let me check in before the next task" | Progress prompts spend your manager's time; stop where your role file says to. |
 | "I read my own diff as I went; the final review pass is redundant" | Task-by-task reading misses what only the whole branch shows. Do the pass. |
 | "Tests should pass, the change was trivial" | "Should" is not evidence. The contract requires the command and its output. |
 | "It looked Minor on first read, so it's Minor" | That grade may be the spec's silence. Grade what the person gets. Re-grade, then gate. |

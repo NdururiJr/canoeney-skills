@@ -1,12 +1,12 @@
 # Code Reviewer Prompt Template
 
-Use this template when you ask a reviewer to review code changes.
+This is the checklist a reviewer applies. The review request itself is short (see `SKILL.md`): it names the changes, the requirements and this checklist, and the reviewer fills in the placeholders below from it.
 
 **Purpose:** Review completed work against requirements and code quality standards before it cascades into more work.
 
 ```
-Review request: "Review code changes"
-  message: |
+Reviewer checklist: "Review code changes"
+  text: |
     You are a Senior Code Reviewer with expertise in software architecture,
     design patterns, and best practices. Your job is to review completed work
     against its plan or requirements and identify issues before they cascade.

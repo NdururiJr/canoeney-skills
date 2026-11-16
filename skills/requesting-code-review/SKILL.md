@@ -30,13 +30,12 @@ HEAD_SHA=$(git rev-parse HEAD)
 
 **2. Send the request:**
 
-Fill the template in `code-reviewer.md` (in this skill's folder) and send it to the reviewer with `send_message`. Who reviews the work is set by your role file.
+Send the reviewer a short request, the way your role file says. Who reviews the work is set by your role file. The request holds:
+- what changed: the branch, and `{BASE_SHA}`..`{HEAD_SHA}`, with a brief summary (`{DESCRIPTION}`);
+- the requirements it implements (`{PLAN_OR_REQUIREMENTS}`: a plan file path, task text, or requirements);
+- the checklist to apply: `code-reviewer.md` in this skill's folder.
 
-**Placeholders:**
-- `{DESCRIPTION}` - Brief summary of what you built
-- `{PLAN_OR_REQUIREMENTS}` - What it should do
-- `{BASE_SHA}` - Starting commit
-- `{HEAD_SHA}` - Ending commit
+A message holds at most 2000 characters; longer text belongs in a file on your branch that you name in the message. If the reviewer does not have this skill, put the checklist from `code-reviewer.md` in such a file and name it.
 
 **3. Act on feedback:**
 - Fix Critical issues immediately
@@ -54,11 +53,10 @@ You: Let me request code review before proceeding.
 BASE_SHA=$(git log --oneline | grep "Task 1" | head -1 | cut -d' ' -f1)
 HEAD_SHA=$(git rev-parse HEAD)
 
-[Send the filled template to the reviewer with send_message]
-  DESCRIPTION: Added verifyIndex() and repairIndex() with 4 issue types
-  PLAN_OR_REQUIREMENTS: Task 2 from docs/superpowers/plans/deployment-plan.md
-  BASE_SHA: a7981ec
-  HEAD_SHA: 3df7661
+[Send the reviewer a short request, the way your role file says]
+  Changed: branch <agent id>/index-repair, a7981ec..3df7661 — added verifyIndex() and repairIndex() with 4 issue types
+  Requirements: Task 2 from docs/superpowers/plans/deployment-plan.md
+  Checklist: code-reviewer.md from requesting-code-review
 
 [The reviewer replies]:
   Strengths: Clean architecture, real tests
@@ -91,4 +89,4 @@ You: [Fix progress indicators]
 - Show code/tests that prove it works
 - Request clarification
 
-See the template in `code-reviewer.md` in this skill's folder.
+See the reviewer's checklist in `code-reviewer.md` in this skill's folder.

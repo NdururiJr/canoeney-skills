@@ -21,10 +21,7 @@ Write the test first. Watch it fail. Write minimal code to pass.
 - Refactoring
 - Behavior changes
 
-**Exceptions (ask your manager (message them with `send_message`) and wait for the reply):**
-- Throwaway prototypes
-- Generated code
-- Configuration files
+**Exceptions are set by your role file.**
 
 Thinking "skip TDD just this once"? Stop. That's rationalization.
 
@@ -307,7 +304,7 @@ Can't check all boxes? You skipped TDD. Start over.
 
 | Problem | Solution |
 |---------|----------|
-| Don't know how to test | Write wished-for API. Write assertion first. Ask your manager (message them with `send_message`). |
+| Don't know how to test | Write wished-for API. Write assertion first. Ask your manager (reach them the way your role file says). |
 | Test too complicated | Design too complicated. Simplify interface. |
 | Must mock everything | Code too coupled. Use dependency injection. |
 | Test setup huge | Extract helpers. Still complex? Simplify design. |

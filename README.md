@@ -64,6 +64,8 @@ Updating a skill to a newer upstream commit follows the same steps: copy the new
 6. brainstorming is trimmed: the visual companion and its scripts are removed.
 7. Stack skills: those of every stack set on a company project, read from HQ's store at the time of the pull request. Rules 2–5 apply.
 
+A note on rule 2: in M0, `send_message` has no recipient for every role (the CTO's manager, the CEO, does not run yet), and a message holds at most 2000 characters. So the skills say "your manager — reach them the way your role file says" and "ask your manager the way your role file says, and wait for the reply". Each role's text names its manager, how to reach them, and its reviewer.
+
 A note on links: skill files name their own companion files as plain text (`writing-good-tests.md` in this skill's folder), not as Markdown links, and hold no web links.
 
 ## Licence

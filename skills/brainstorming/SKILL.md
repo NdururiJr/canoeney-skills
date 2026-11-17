@@ -23,7 +23,8 @@ Before you reply, ask yourself: what do I know about what they want, and
 why?
 
 - **Everything that matters is in the request** ("make the icon cornflower
-  blue"). This is a quick, clear task. Do it, and say what you did.
+  blue"). This is a quick, clear task. Within what your role file allows, do it
+  or hand it on as your role file says, and say what you did.
 - **Something non-trivial is missing.** Start the conversation.
 
 Before you start implementing, you must, in order:
@@ -181,8 +182,9 @@ look itself is theirs to decide:
 
 **Spike to feel things out.** Agentic work is waterfall, but very, very
 fast. A quick throwaway build is often the cheapest way to learn what
-they want or whether something works. Offer one when it would help.
-When they just want to spike, get out of the way. Spikes get no tests
+they want or whether something works. Within what your role file
+allows, offer one when it would help; who builds it is set by your role
+file. When they just want to spike, get out of the way. Spikes get no tests
 or minimal ones, aren't bulletproof, and stay labeled throwaway. Bring
 what the spike taught you back into the conversation.
 
@@ -270,7 +272,8 @@ installing dependencies, creating projects, and invoking an
 implementation skill. Reading and exploring are fine.
 
 Two exceptions. If they opted out of the questions, the skill is done
-and the gate goes with it. A spike they said yes to may be built; it
+and the gate goes with it. A spike they said yes to may be built, within what your role file
+allows; it
 stays labeled throwaway, and keeping what it produced is a new request
 that comes back through this gate.
 

@@ -28,8 +28,7 @@ conflicts, ambiguities and plan defects yourself. The spec is the binding
 authority, the plan is its argument, and your judgment settles what
 neither answers. Record every decision in the ledger as
 `Ruling: <what you decided> — <why> — <what it costs if wrong>`, and keep
-going. Deviating from the plan without a ledgered ruling is a decision made
-in secret.
+going. Every deviation from the plan gets a `Ruling:` line in the ledger.
 
 A plan so broken that every path forward is a guess also stops you: ask
 your manager the way your role file says, and wait for the reply. What
@@ -112,7 +111,7 @@ Harness todos are a live view; the ledger is the record.
   recollection. A ledger whose first line names a different plan file is
   another plan's progress: leave it and start your own, fresh.
 - Create the ledger with its identity as the first line:
-  `# SDD ledger — plan: <plan file path>`.
+  `# Progress ledger — plan: <plan file path>`.
 - `git clean -fdx` will destroy the workspace (it's git-ignored scratch);
   if that happens, recover from `git log`.
 
@@ -260,7 +259,7 @@ in the rulings list. There is no second fix pass.
 Before you delete anything, collect every ledger line containing
 `Ruling:` into your final message under "Rulings I made", in the order you
 made them, each with what it costs if wrong, and every `minor (deferred)`
-line under "Deferred minors". Both lists are exhaustive. Your final
+line under "Deferred minors". Each list holds every such ledger line. Your final
 message (reach your manager the way your role file says) is the only
 place the decisions you took on your manager's behalf — and the findings
 you chose not to act on — reach them.
@@ -282,7 +281,7 @@ Then hand the branch over as your role file says.
 | "I remember what Task N says" | You remember a summary. The task's text has the exact values. Read it. |
 | "The plan's code is right, skip watching the test fail" | A test you never saw fail proves nothing. It is one step. Run it. |
 | "I'll run the full suite at the end instead of per step" | Per-step runs are how you learn which step broke it. The end-of-task run is the contract, not a substitute. |
-| "The plan is wrong here, I'll just do the right thing" | Do the right thing and ledger the ruling. Unledgered deviation is a decision made in secret. |
+| "The plan is wrong here, I'll just do the right thing" | Do the right thing and ledger the ruling. A deviation without a `Ruling:` line cannot be found later by you or anyone reading the ledger. |
 | "I'll write the ledger lines after a few tasks" | Compaction does not wait for a convenient moment. One line per task, in the same message as the commit. |
 | "Let me check in before the next task" | Progress prompts spend your manager's time; stop where your role file says to. |
 | "I read my own diff as I went; the final review pass is redundant" | Task-by-task reading misses what only the whole branch shows. Do the pass. |

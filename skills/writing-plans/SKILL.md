@@ -31,8 +31,8 @@ This structure informs the task decomposition. Each task should produce self-con
 
 ## Task Right-Sizing
 
-A task is the smallest unit that carries its own test cycle and is worth a
-fresh reviewer's gate. When drawing task boundaries: fold setup,
+A task is the smallest unit that carries its own test cycle and is worth its
+own review. When drawing task boundaries: fold setup,
 configuration, scaffolding, and documentation steps into the task whose
 deliverable needs them; split only where a reviewer could meaningfully
 reject one task while approving its neighbor. Each task ends with an
